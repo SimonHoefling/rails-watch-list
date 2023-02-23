@@ -1,0 +1,14 @@
+<div class="text-center my-5">
+  <h1>MY LISTS</h1>
+</div>
+<div class="container">
+  <div class="card-deck mx-auto mt-5">
+    <% @lists.each do |list| %>
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to list.name, list_path(list), class: 'text-decoration-none'%></h5>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
